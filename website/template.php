@@ -8,9 +8,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Styles.css">
-</head>
-<body>
-<!-- Navigation Bar -->
+
+ </head>
+ <body>
+ <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-sm navbar-dark navbar_Dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
@@ -27,20 +28,23 @@
                 <?php
                 $accessLevel = 2;
                 if (isset($_SESSION["username"])) {
+                    $userToLoad = $_SESSION["user_id"];
+                    $sql = $conn->query("SELECT Score FROM Users WHERE ID= " . $userToLoad);
+                    $userInformation = $sql->fetch();
+                    $userScore = $userInformation["Score"];
                     echo '
                     <!--<li class="nav-item"><a class="nav-link" href="flagClaimer.php">Flag Claimer</a></li>-->
-                    
-                <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle navbar_Dark" href="#" id="navbarDropdown" 
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        CTF
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="leaderboard.php">Leaderboard</a>
-                        <a class="dropdown-item" href="challengesList.php">Challenges</a>
-                        <a class="dropdown-item" href="tutorialList.php">Tutorials</a>
-                    </ul>
-                </li>                                                                                                                  
+                    <!--what is object-oriented programming?-->
+               <li class="nav-item"><a class="nav-link navbar_Dark" href="leaderboard.php">Leaderboard</a></li>  
+               <li class="nav-item"><a class="nav-link navbar_Dark" href="challengesList.php">Challenges</a></li>  
+               <li class="nav-item"><a class="nav-link navbar_Dark" href="tutorialList.php">Tutorials</a></li>             
+               <li class="nav-item"><a class="nav-link navbar_Dark" href="contact.php">Contact&nbsp;us</a>  <!--why doesnt this work. nvm figured it out-->      
+               
+               
+               <li class="nav-item nav-link navbar_Dark">?php echo htmlspecialchars($userToLoad); ?<></li>
+               
+               <li class="nav-item"><a class="nav-link navbar_Dark" href="logout.php">Logout</a></li>
+                                                                                                     
                     ';
                     if ($_SESSION["access_level"] == $accessLevel) {
 
@@ -64,33 +68,21 @@
                         </li>
                         <?php
                     }
-                    ?>
-                <li class="nav-item"><a class="nav-link navbar_Dark" href="contact.php">Contact Us</a>
-                    <?php
+
                 } else {
                     echo '
                     <li class="nav-item"><a class="nav-link navbar_Dark" href="register.php">Register</a></li>
-                    ';
+                    '; #Register button (when NOT logged in)
                     echo '
                     <li class="nav-item"><a class="nav-link navbar_Dark" href="login.php">Login</a></li>
-                    ';
+                    '; #Login button (when NOT logged in)
 
 
                 }
                 ?>
 
             </ul>
-        </div>
-        <?php
-        if (isset($_SESSION["username"])) {
-            $userToLoad = $_SESSION["user_id"];
-            $sql = $conn->query("SELECT Score FROM Users WHERE ID= " . $userToLoad);
-            $userInformation = $sql->fetch();
-            $userScore = $userInformation["Score"];
-            echo "<div class='alert alert-success d-flex'><span>Welcome, " . $_SESSION["username"] . "<br> Score: " . $userScore . "<br><a href='logout.php'>Logout</a></span> </div>";
-        }
-        ?>
-    </div>
+
 </nav>
 <?php
 if (isset($_SESSION['flash_message'])) {

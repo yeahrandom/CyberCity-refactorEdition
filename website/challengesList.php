@@ -8,6 +8,7 @@ if (!authorisedAccess(false, true, true)) {
 ?>
 <div>
     <title>Cyber City - Challenges</title>
+
     <link rel="stylesheet" href="css/moduleList.css">
 
     <h1 >Challenge List</h1>
