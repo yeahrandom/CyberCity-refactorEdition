@@ -8,10 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Styles.css">
-
- </head>
- <body>
- <!-- Navigation Bar -->
+</head>
+<body>
+<!-- Navigation Bar -->
 <nav class="navbar navbar-expand-sm navbar-dark navbar_Dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
@@ -35,17 +34,19 @@
                     echo '
                     <!--<li class="nav-item"><a class="nav-link" href="flagClaimer.php">Flag Claimer</a></li>-->
                     <!--what is object-oriented programming?-->
-               <li class="nav-item"><a class="nav-link navbar_Dark" href="leaderboard.php">Leaderboard</a></li>  
-               <li class="nav-item"><a class="nav-link navbar_Dark" href="challengesList.php">Challenges</a></li>  
-               <li class="nav-item"><a class="nav-link navbar_Dark" href="tutorialList.php">Tutorials</a></li>             
-               <li class="nav-item"><a class="nav-link navbar_Dark" href="contact.php">Contact&nbsp;us</a>  <!--why doesnt this work. nvm figured it out-->      
-               
-               
-               <li class="nav-item nav-link navbar_Dark">?php echo htmlspecialchars($userToLoad); ?<></li>
-               
-               <li class="nav-item"><a class="nav-link navbar_Dark" href="logout.php">Logout</a></li>
-                                                                                                     
+                    <li class="nav-item"><a class="nav-link navbar_Dark" href="leaderboard.php">Leaderboard</a></li>  
+                    <li class="nav-item"><a class="nav-link navbar_Dark" href="challengesList.php">Challenges</a></li>  
+                    <li class="nav-item"><a class="nav-link navbar_Dark" href="tutorialList.php">Tutorials</a></li>             
+                    <li class="nav-item"><a class="nav-link navbar_Dark" href="contact.php">Contact&nbsp;us</a>  <!--why doesnt this work-->                                                                                   
                     ';
+                    echo "
+                    <!--IT TOOK 3 HOURS JUST TO GET THIS FAR, AND IT DOESNT WORK-->   
+                    <li class='nav-item' ><a class='nav-link navbar_Dark' href='/Writerside/topics/welcome.md'>Documentation</a></li> 
+                    <li class='nav-item align-right' ><p class='navbar_Dark'>Logged&nbsp;in&nbsp;as:&nbsp;" . $_SESSION["username"] . "&nbsp;&nbsp;</p></li> 
+                    <li class='nav-item align-right'' ><p class='navbar_Dark'>Score:&nbsp;" . $userScore . "</p></li>   
+                    <li class='nav-item align-right'' ><a class='nav-link navbar_Dark' href='logout.php'>Logout</a></li> 
+                    ";
+
                     if ($_SESSION["access_level"] == $accessLevel) {
 
                         ?>
@@ -68,6 +69,8 @@
                         </li>
                         <?php
                     }
+
+
 
                 } else {
                     echo '
