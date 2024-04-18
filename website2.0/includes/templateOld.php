@@ -6,15 +6,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/Styles.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/Styles.css">
 </head>
 <body>
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-sm navbar-dark navbar_Dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">
-            <img src="images/CCLogo.png" alt="" width="100" height="100">
+        <a class="navbar-brand" href="<?php echo BASE_URL; ?>index.php">
+            <img src="/assets/img/CCLogo.png" alt="" width="100" height="100">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link navbar_Dark" href="index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link navbar_Dark" href="<?php echo BASE_URL; ?>index.php">Home</a></li>
                 <!--<li class="nav-item"><a class="nav-link" href="leaderboard.php">Leaderboard</a></li>-->
                 <?php
                 $accessLevel = 2;
@@ -31,23 +31,21 @@
                     $sql = $conn->query("SELECT Score FROM Users WHERE ID= " . $userToLoad);
                     $userInformation = $sql->fetch();
                     $userScore = $userInformation["Score"];
+
                     echo '
                     <!--<li class="nav-item"><a class="nav-link" href="flagClaimer.php">Flag Claimer</a></li>-->
                     <!--what is object-oriented programming?-->
-                    <li class="nav-item"><a class="nav-link navbar_Dark" href="leaderboard.php">Leaderboard</a></li>  
-                    <li class="nav-item"><a class="nav-link navbar_Dark" href="challengesList.php">Challenges</a></li>  
-                    <li class="nav-item"><a class="nav-link navbar_Dark" href="tutorialList.php">Tutorials</a></li>             
-                    <li class="nav-item"><a class="nav-link navbar_Dark" href="contact.php">Contact&nbsp;us</a>  <!--why doesnt this work-->                                                                                   
-                    ';
-
-
-                    echo "
+                    <li class="nav-item"><a class="nav-link navbar_Dark" href="' . BASE_URL .'pages/leaderboard/leaderboard.php">Leaderboard</a></li>  
+                    <li class="nav-item"><a class="nav-link navbar_Dark" href="' . BASE_URL .'pages/challenges/challengesList.php">Challenges</a></li>  
+                    <li class="nav-item"><a class="nav-link navbar_Dark" href="' . BASE_URL .'pages/tutorials/tutorialList.php">Tutorials</a></li>             
+                    <li class="nav-item"><a class="nav-link navbar_Dark" href="' . BASE_URL .'pages/contactUs/contact.php">Contact&nbsp;us</a>  <!--why doesnt this work-->                                                                                   
+              
                     <!--IT TOOK 3 HOURS JUST TO GET THIS FAR, AND IT DOESNT WORK-->   
-                    <li class='nav-item' ><a class='nav-link navbar_Dark' href='/Writerside/topics/welcome.md'>Documentation</a></li> 
-                    <li class='nav-item' ><p class='navbar_Dark'>Logged&nbsp;in&nbsp;as:&nbsp;" . $_SESSION["username"] . "&nbsp;&nbsp;</p></li> 
-                    <li class='nav-item' ><p class='navbar_Dark'>Score:&nbsp;" . $userScore . "</p></li>   
-                    <li class='nav-item' ><a class='nav-link navbar_Dark' href='logout.php'>Logout</a></li> 
-                    ";
+                    <li class="nav-item" ><a class="nav-link navbar_Dark" href="' . BASE_URL .'pages/documentation/TODO">Documentation</a></li> 
+                    <li class="nav-item" ><p class="navbar_Dark">Logged&nbsp;in&nbsp;as:&nbsp;' . $_SESSION["username"] . '&nbsp;&nbsp;</p></li> 
+                    <li class="nav-item" ><p class="navbar_Dark">Score:&nbsp;' . $userScore . '</p></li>   
+                    <li class="nav-item" ><a class="nav-link navbar_Dark" href="' . BASE_URL .'/pages/user/logout.php">Logout</a></li> 
+                    ';
 
                     if ($_SESSION["access_level"] == $accessLevel) {
 
@@ -59,27 +57,25 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <h3 style="padding-left: 15px">Edit Users</h3>
-                                <a class="dropdown-item" href="userList.php">Enabled User List</a>
-                                <a class="dropdown-item" href="disabledUsers.php">Disabled User List</a>
+                                <a class="dropdown-item" href="<?php echo BASE_URL; ?>pages/admin/userList.php">Enabled User List</a>
+                                <a class="dropdown-item" href="<?php echo BASE_URL; ?>pages/admin/disabledUsers.php">Disabled User List</a>
 
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="moduleRegister.php">Add New Module & Challenge</a>
-                                <a class="dropdown-item" href="resetGame.php">Reset Game</a>
-                                <a class="dropdown-item" href="contactpage.php">View Contact requests</a>
-                                <a class="dropdown-item" href="readContactRequests.php">Read Contact Requests</a>
+                                <a class="dropdown-item" href="<?php echo BASE_URL; ?>pages/admin/moduleRegister.php">Add New Module & Challenge</a>
+                                <a class="dropdown-item" href="<?php echo BASE_URL; ?>pages/admin/resetGame.php">Reset Game</a>
+                                <a class="dropdown-item" href="<?php echo BASE_URL; ?>pages/admin/contactpage.php">View Contact requests</a>
+                                <a class="dropdown-item" href="<?php echo BASE_URL; ?>pages/admin/readContactRequests.php">Read Contact Requests</a>
                             </ul>
                         </li>
                         <?php
                     }
 
-
-
                 } else {
                     echo '
-                    <li class="nav-item"><a class="nav-link navbar_Dark" href="register.php">Register</a></li>
+                    <li class="nav-item"><a class="nav-link navbar_Dark" href="' . BASE_URL . 'pages/user/register.php">Register</a></li>
                     '; #Register button (when NOT logged in)
                     echo '
-                    <li class="nav-item"><a class="nav-link navbar_Dark" href="login.php">Login</a></li>
+                    <li class="nav-item"><a class="nav-link navbar_Dark" href="' . BASE_URL . 'pages/user/login.php">Login</a></li>
                     '; #Login button (when NOT logged in)
 
 
@@ -89,6 +85,8 @@
             </ul>
 
 </nav>
+
+
 <?php
 if (isset($_SESSION['flash_message'])) {
     $message = $_SESSION['flash_message'];
@@ -104,7 +102,7 @@ if (isset($_SESSION['flash_message'])) {
     <?php
 }
 ?>
-<script src="js/bootstrap.bundle.js"></script>
+<script src="/assets/js/bootstrap.bundle.js"></script>
 <?php
 function sanitise_data($data)
 {
