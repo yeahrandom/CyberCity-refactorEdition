@@ -14,7 +14,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark navbar_Dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?php echo BASE_URL; ?>index.php">
-            <img src="/assets/img/CCLogo.png" alt="" width="100" height="100">
+            <img src="../assets/img/CCLogo.png" alt="" width="100" height="100">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,7 +102,7 @@ if (isset($_SESSION['flash_message'])) {
     <?php
 }
 ?>
-<script src="/assets/js/bootstrap.bundle.js"></script>
+<script src="../assets/js/bootstrap.bundle.js"></script>
 <?php
 function sanitise_data($data)
 {
