@@ -14,60 +14,82 @@
     <a class="navbar-brand" href="<?php echo BASE_URL; ?>index.php">
         <img src="/assets/img/CCLogo.png" alt="" width="100" height="100">
     <div class="collapse navbar-collapse" id="navbarNav">
-        <?php
-        $accessLevel = 2;
-        if(isset($_SESSION['username'])) {
-            $userToLoad = $_SESSION['user_id'];
-            $sql = $conn->query("SELECT Score FROM Users WHERE ID = " . $userToLoad);
-            $userInformation = $sql->fetch();
-            $userScore = $userInformation['Score'];
-        }
-        ?>
-        <ul class="navbar-nav me-auto"> <!--Right side of navbar-->
+        <ul class="navbar-nav me-auto"> <!--Left side of navbar-->
             <li class="nav-item active">
-                <?php echo<a class="nav-link" href="'. BASE_URL .'?>index.php">Home</a>
-
+                <a class="nav-link" href="<?php echo BASE_URL; ?>index.php">Home</a>
             </li>
+            <?php
+            $accessLevel = 2;
+            if(isset($_SESSION['username'])) {
+                $userToLoad = $_SESSION['user_id'];
+                $sql = $conn->query("SELECT Score FROM Users WHERE ID = " . $userToLoad);
+                $userInformation = $sql->fetch();
+                $userScore = $userInformation['Score'];
+            echo'
             
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-
+                <a class="nav-link" href="' . BASE_URL .'pages/leaderboard/leaderboard.php">Leaderboard</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-
+                <a class="nav-link" href="' . BASE_URL .'pages/challenges/challengesList.php">Challenges</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-
+                <a class="nav-link" href="' . BASE_URL .'pages/tutorials/tutorialList.php">Tutorials</a></a>
             </li>
-        </ul>
+            ';
 
+                if ($_SESSION["access_level"] == $accessLevel) {
+                echo '
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Administrator Functions
+                        </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <h3 style="padding-left: 15px">Edit Users</h3>
+                        <a class="dropdown-item" href="' . BASE_URL .'pages/admin/userList.php">Enabled User List</a>
+                        <a class="dropdown-item" href="' . BASE_URL .'pages/admin/disabledUsers.php">Disabled User List</a>
+                    <div class="dropdown-divider"></div>
+                         <a class="dropdown-item" href="' . BASE_URL .'pages/admin/moduleRegister.php">Add New Module & Challenge</a>
+                         <a class="dropdown-item" href="' . BASE_URL .'pages/admin/resetGame.php">Reset Game</a>
+                         <a class="dropdown-item" href="' . BASE_URL .'pages/admin/contactpage.php">View Contact requests</a>
+                         <a class="dropdown-item" href="' . BASE_URL .'pages/admin/readContactRequests.php">Read Contact Requests</a>
+                    </ul>
+                </li>
+        </ul>';
+
+        echo '
         <ul class="navbar-nav ms-auto"> <!--Right side of navbar-->
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-
-            </li>
-
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-
+                <a class="nav-link" href="' . BASE_URL .'pages/contactUs/contact.php">Contact&nbsp;us</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-
+                <a class="nav-link" >Logged&nbsp;in&nbsp;as:&nbsp;' . $_SESSION["username"] . '</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-
+                <a class="nav-link" >Score:&nbsp;' . $userScore . '</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="' . BASE_URL .'/pages/user/logout.php">Logout</a></a>
             </li>
         </ul>
+        ';}
+        ?>
 
-
-
+        <?php
+        } else {
+        echo '
+        <ul class="navbar-nav me-auto"> <!--Left side of navbar-->
+            <!-- #Register button (when NOT logged in)"><a class="nav-link navbar_Dark" href="' . BASE_URL . 'pages/use -->
+            <li class="nav-item active"><a class="nav-link" href="' . BASE_URL . 'pages/user/register.php">Register</a></li>
+      
+            <!-- Login button (when NOT logged in) -->
+            <li class="nav-item active"><a class="nav-link" href="' . BASE_URL . 'pages/user/login.php">Login</a></li>
+        ';}
+        ?>
+        </ul>
 
     </div>
-
 
 </nav>
 

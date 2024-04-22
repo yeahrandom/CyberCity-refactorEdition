@@ -1,4 +1,4 @@
-<?php include "template.php";
+<?php include "../../includes/template.php";
 /** @var $conn */
 
 if (!authorisedAccess(false, false, true)) {
@@ -7,7 +7,7 @@ if (!authorisedAccess(false, false, true)) {
 
 ?>
 <title>Disabled User List</title>
-<link rel="stylesheet" href="css/moduleList.css">
+<link rel="stylesheet" href="../../assets/css/moduleList.css">
 <h1>Disabled User List</h1>
 <?php
 
