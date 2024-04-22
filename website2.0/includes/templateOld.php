@@ -72,8 +72,8 @@
 
                 } else {
                     echo '
-                    <li class="nav-item"><a class="nav-link navbar_Dark" href="' . BASE_URL . 'pages/user/register.php">Register</a></li>
-                    '; #Register button (when NOT logged in)
+                    <li class="nav-itemr/register.php">Register</a></li>
+                    '; #Register button (when NOT logged in)"><a class="nav-link navbar_Dark" href="' . BASE_URL . 'pages/use
                     echo '
                     <li class="nav-item"><a class="nav-link navbar_Dark" href="' . BASE_URL . 'pages/user/login.php">Login</a></li>
                     '; #Login button (when NOT logged in)
