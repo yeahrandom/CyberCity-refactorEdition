@@ -1,8 +1,8 @@
-<?php include "template.php";
+<?php include "../../includes/template.php";
 /** @var $conn */
 
 if (!authorisedAccess(false, false, true)) {
-    header("Location:index.php");
+    header("Location:../../index.php");
 }
 
 ?>

@@ -2,7 +2,7 @@
 /** @var $conn */
 
 if (!authorisedAccess(false, false, true)) {
-    header("Location:index.php");
+    header("Location:../../index.php");
 }
 
 ?>

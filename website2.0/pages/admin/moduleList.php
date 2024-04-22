@@ -1,14 +1,14 @@
-<?php include "template.php";
+<?php include "../../includes/template.php";
 /** @var $conn */
 
 if (!authorisedAccess(false, true, true)) {
-    header("Location:index.php");
+    header("Location:../../index.php");
 }
 
 ?>
 
     <title>Module List</title>
-    <link rel="stylesheet" href="css/moduleList.css">
+    <link rel="stylesheet" href="../../assets/css/moduleList.css">
 
     <h1>Module List</h1>
 
@@ -18,9 +18,9 @@ while ($moduleData = $moduleList->fetch()) {
     $moduleID = $moduleData["ID"];
     echo "<div class='product_wrapper'>";
     if ($moduleData['Image']) { #Does the Module have an Image?
-        echo "<div class='image'><a href='moduleDisplay.php?ModuleID=" . $moduleID . "'><img src='images/modules/" . $moduleData['Image'] . "' width='100' height='100'/></a></div>"; #Display Module Image
+        echo "<div class='image'><a href='moduleDisplay.php?ModuleID=" . $moduleID . "'><img src='../../assets/img/challengeImages/" . $moduleData['Image'] . "' width='100' height='100'/></a></div>"; #Display Module Image
     } else {
-        echo "<div class='image'><a href='moduleDisplay.php?ModuleID=" . $moduleID . "'><img src='images/modules/blank.jpg'width='100' height='100'/></a></div>"; #Display Placeholder Image
+        echo "<div class='image'><a href='moduleDisplay.php?ModuleID=" . $moduleID . "'><img src='../../assets/img/challengeImages/blank.jpg'width='100' height='100'/></a></div>"; #Display Placeholder Image
     }
     echo "
         <div class='name'>" . $moduleData[0] . "</div>

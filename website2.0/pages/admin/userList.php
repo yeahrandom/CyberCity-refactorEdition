@@ -1,13 +1,13 @@
-<?php include "template.php";
+<?php include "../../includes/template.php";
 /** @var $conn */
 
 if (!authorisedAccess(false, false, true)) {
-    header("Location:index.php");
+    header("Location:../../index.php");
 }
 
 ?>
     <title>User List</title>
-    <link rel="stylesheet" href="css/moduleList.css">
+    <link rel="stylesheet" href="../../assets/css/moduleList.css">
     <h1>Enabled User List</h1>
 <?php
 $userList = $conn->query("SELECT ID, Username, AccessLevel, Enabled FROM Users WHERE Enabled=1"); #Get all Enabled Modules

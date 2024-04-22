@@ -1,7 +1,7 @@
-<?php include "template.php";
+<?php include "../../includes/template.php";
 
 if (!authorisedAccess(false, false, true)) {
-    header("Location:index.php");
+    header("Location:../../index.php");
 }
 /** @var $conn */
 $username = "";
