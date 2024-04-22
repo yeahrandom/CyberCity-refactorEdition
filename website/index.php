@@ -3,7 +3,8 @@
 
 
 <title>Cyber City</title>
-<div style="text-align: left;">
+<div class = "center-box">
+    <div class = "title" >
     <h1>Welcome to the Cyber City</h1>
 
 
@@ -11,14 +12,14 @@
 
     if (isset($_SESSION["username"])) {
         echo
-        "<h2 class='text'>You're logged in, you may now play the CyberCity CTF game</h2>";
+        "<h2 class=''>You're logged in, you may now play the CyberCity CTF game</h2>";
 
         ?>
         <?php
     } else {
         echo
 
-        "<h2 class='text'> Please log in or register to participate in the CyberCity CTF Challenge</h2>";
+        "<h2 class=''> Please log in or register to participate in the CyberCity CTF Challenge</h2>";
     }
     ?>
     <!--
@@ -27,5 +28,6 @@
     </div>
 
     -->
+    </div>
 </div>
 <p></p>

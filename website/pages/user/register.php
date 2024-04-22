@@ -9,22 +9,25 @@ if (!authorisedAccess(true, true, true)) {
 
 <title>Register Page</title>
 
-<h1>Please register on our site</h1>
+
+<h1 style = 'text-align: center'>User registration</h1>
+<h2 style = 'text-align: center'>Create your account here</h2>
+
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
-    <div class="container-fluid">
+    <div class="container-fluid center-box">
         <div class="row">
             <!--Customer Details-->
 
             <div class="col-md-12">
                 <h2>Account Details</h2>
-                <p>Please enter wanted Username and Password:</p>
+                <p>Please enter a Username and Password:</p>
                 <p>User Name<input type="text" name="username" class="form-control" required="required"></p>
                 <p>Password<input type="password" name="password" class="form-control" required="required"></p>
-
+                <input type="submit" name="formSubmit" value="Submit">
             </div>
         </div>
     </div>
-    <input type="submit" name="formSubmit" value="Submit">
+
 </form>
 
 <?php
