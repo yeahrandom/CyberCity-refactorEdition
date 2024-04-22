@@ -8,76 +8,65 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/Styles.css">
 </head>
-
-
-
-
-<head>
-    <title></title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/Styles.css">
-</head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark navbar_Dark navbar-bg-dark">
-    <a class="navbar-brand" href="#"><img src="../assets/img/CCLogo.png" alt="logo" height="30">TBW</a>
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="" -->
-
+    <a class="navbar-brand" href="<?php echo BASE_URL; ?>index.php">
+        <img src="/assets/img/CCLogo.png" alt="" width="100" height="100">
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
+        <?php
+        $accessLevel = 2;
+        if(isset($_SESSION['username'])) {
+            $userToLoad = $_SESSION['user_id'];
+            $sql = $conn->query("SELECT Score FROM Users WHERE ID = " . $userToLoad);
+            $userInformation = $sql->fetch();
+            $userScore = $userInformation['Score'];
+        }
+        ?>
+        <ul class="navbar-nav me-auto"> <!--Right side of navbar-->
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <?php echo<a class="nav-link" href="'. BASE_URL .'?>index.php">Home</a>
+
+            </li>
+            
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
 
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Home</a>
 
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Home</a>
+
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ms-auto"> <!--Right side of navbar-->
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
 
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Home</a>
 
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
 
-
-
-
-
+            </li>
         </ul>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 </nav>
