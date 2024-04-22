@@ -5,17 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/Styles.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/Styles.css">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark navbar_Dark navbar-bg-dark">
     <a class="navbar-brand" href="<?php echo BASE_URL; ?>index.php">
-        <img src="../assets/img/CCLogo.png" alt="" width="100" height="100">
+        <img src="/assets/img/CCLogo.png" alt="" width="100" height="100">
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto"> <!--Left side of navbar-->
             <li class="nav-item active">
+                <a class="nav-link" href="<?php echo BASE_URL; ?>index.php">Home</a>
             </li>
             <?php
             $accessLevel = 2;
@@ -111,7 +112,7 @@ if (isset($_SESSION['flash_message'])) {
 ?>
 
 
-<script src="../assets/js/bootstrap.bundle.js"></script>
+<script src="/assets/js/bootstrap.bundle.js"></script>
 
 
 <?php
