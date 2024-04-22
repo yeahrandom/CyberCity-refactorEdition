@@ -1,5 +1,5 @@
 <?php
-const BASE_URL = '/website2.0/website2.0/';
+const BASE_URL = '/website/website/';
 //<!-- had to be done because PHPStorm wouldn't play ball-->
 session_start();
 $servername = "10.177.200.71";

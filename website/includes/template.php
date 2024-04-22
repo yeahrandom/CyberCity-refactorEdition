@@ -1,6 +1,6 @@
 <?php require_once 'config.php'; ?>
 <head>
-    <title></title>
+    <title>CyberCity</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,9 +14,9 @@
     <a class="navbar-brand" href="<?php echo BASE_URL; ?>index.php">
         <img src="/assets/img/CCLogo.png" alt="" width="100" height="100">
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto"> <!--Left side of navbar-->
+        <ul class="navbar-nav me-auto "> <!--Left side of navbar-->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo BASE_URL; ?>index.php">Home</a>
+                <a class="nav-link text-white" href="<?php echo BASE_URL; ?>index.php">Home</a>
             </li>
             <?php
             $accessLevel = 2;
@@ -28,20 +28,20 @@
             echo'
             
             <li class="nav-item active">
-                <a class="nav-link" href="' . BASE_URL .'pages/leaderboard/leaderboard.php">Leaderboard</a>
+                <a class="nav-link text-white" href="' . BASE_URL .'pages/leaderboard/leaderboard.php">Leaderboard</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="' . BASE_URL .'pages/challenges/challengesList.php">Challenges</a>
+                <a class="nav-link text-white" href="' . BASE_URL .'pages/challenges/challengesList.php">Challenges</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="' . BASE_URL .'pages/tutorials/tutorialList.php">Tutorials</a></a>
+                <a class="nav-link text-white" href="' . BASE_URL .'pages/tutorials/tutorialList.php">Tutorials</a></a>
             </li>
             ';
 
                 if ($_SESSION["access_level"] == $accessLevel) {
                 echo '
                 <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Administrator Functions
                         </a>
@@ -61,16 +61,16 @@
         echo '
         <ul class="navbar-nav ms-auto"> <!--Right side of navbar-->
             <li class="nav-item active">
-                <a class="nav-link" href="' . BASE_URL .'pages/contactUs/contact.php">Contact&nbsp;us</a>
+                <a class="nav-link text-white" href="' . BASE_URL .'pages/contactUs/contact.php">Contact&nbsp;us</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" >Logged&nbsp;in&nbsp;as:&nbsp;' . $_SESSION["username"] . '</a>
+                <a class="nav-link text-white" >Logged&nbsp;in&nbsp;as:&nbsp;' . $_SESSION["username"] . '</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" >Score:&nbsp;' . $userScore . '</a>
+                <a class="nav-link text-white" >Score:&nbsp;' . $userScore . '</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="' . BASE_URL .'/pages/user/logout.php">Logout</a></a>
+                <a class="nav-link text-white" href="' . BASE_URL .'/pages/user/logout.php">Logout</a></a>
             </li>
         </ul>
         ';}
@@ -81,10 +81,10 @@
         echo '
         <ul class="navbar-nav me-auto"> <!--Left side of navbar-->
             <!-- #Register button (when NOT logged in)"><a class="nav-link navbar_Dark" href="' . BASE_URL . 'pages/use -->
-            <li class="nav-item active"><a class="nav-link" href="' . BASE_URL . 'pages/user/register.php">Register</a></li>
+            <li class="nav-item active"><a class="nav-link text-white" href="' . BASE_URL . 'pages/user/register.php">Register</a></li>
       
             <!-- Login button (when NOT logged in) -->
-            <li class="nav-item active"><a class="nav-link" href="' . BASE_URL . 'pages/user/login.php">Login</a></li>
+            <li class="nav-item active"><a class="nav-link text-white" href="' . BASE_URL . 'pages/user/login.php">Login</a></li>
         ';}
         ?>
         </ul>
