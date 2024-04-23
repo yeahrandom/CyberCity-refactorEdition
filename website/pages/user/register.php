@@ -14,7 +14,7 @@ if (!authorisedAccess(true, true, true)) {
 <h2 style = 'text-align: center'>Create your account here</h2>
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
-    <div class="container-fluid center-box">
+    <div class="container-fluid centerBox">
         <div class="row">
             <!--Customer Details-->
 

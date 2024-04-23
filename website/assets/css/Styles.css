@@ -1,4 +1,4 @@
-.navbar_Dark {
+.navbarCustom {
     /* background: #232526; */
 
     background: rgba(35,37,38,0.5);
@@ -70,7 +70,7 @@ a {
     color: #ff5b00;
 }
 
-.center-box {
+.centerBox {
     background: rgba(35,37,38,0.5);
     border-radius: 1rem;
     padding: 1rem;
@@ -83,6 +83,22 @@ a {
     width: 100%;
     margin: 5rem auto;
 }
+
+.wideBox {
+    background: rgba(35,37,38,0.5);
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48rem;
+
+
+
+    margin: 1%  ;
+}
+
 
 .title {
     margin-bottom: 2rem;

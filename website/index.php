@@ -3,7 +3,7 @@
 
 
 <title>Cyber City</title>
-<div class = "center-box">
+<div class = "wideBox">
     <div class = "title" >
     <h1>Welcome to the Cyber City</h1>
 

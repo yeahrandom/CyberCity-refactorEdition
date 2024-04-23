@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar_Dark navbar-bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark navbarCustom navbar-bg-dark">
     <a class="navbar-brand" href="<?php echo BASE_URL; ?>index.php">
         <img src="/assets/img/CCLogo.png" alt="" width="100" height="100">
     <div class="collapse navbar-collapse" id="navbarNav">
