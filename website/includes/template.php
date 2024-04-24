@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/Styles.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/Styles.css">
 </head>
 <body>
 
@@ -112,7 +112,7 @@ if (isset($_SESSION['flash_message'])) {
 ?>
 
 
-<script src="/assets/js/bootstrap.bundle.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.js"></script>
 
 
 <?php

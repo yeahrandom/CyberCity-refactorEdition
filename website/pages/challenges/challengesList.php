@@ -9,7 +9,7 @@ if (!authorisedAccess(false, true, true)) {
 <div>
     <title>Cyber City - Challenges</title>
 
-    <link rel="stylesheet" href="/assets/css/moduleList.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/moduleList.css">
 
     <h1 >Challenge List</h1>
 
