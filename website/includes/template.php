@@ -61,6 +61,9 @@
         echo '
         <ul class="navbar-nav ms-auto"> <!--Right side of navbar-->
             <li class="nav-item active">
+                <a class="nav-link text-white" href="' . BASE_URL .'/assets/videos/video.mp4">Video</a></a>
+            </li>
+            <li class="nav-item active">
                 <a class="nav-link text-white" href="' . BASE_URL .'pages/contactUs/contact.php">Contact&nbsp;us</a>
             </li>
             <li class="nav-item active">
@@ -70,7 +73,7 @@
                 <a class="nav-link text-white" >Score:&nbsp;' . $userScore . '</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link text-white" href="' . BASE_URL .'/pages/user/logout.php">Logout</a></a>
+                <a class="nav-link" style = "color: indianred" href="' . BASE_URL .'/pages/user/logout.php">Logout</a></a>
             </li>
         </ul>
         ';}
@@ -79,12 +82,14 @@
         <?php
         } else {
         echo '
-        <ul class="navbar-nav me-auto"> <!--Left side of navbar-->
+        </ul>
+        <ul class="navbar-nav ms-auto"> <!--Right side of navbar-->
             <!-- #Register button (when NOT logged in)"><a class="nav-link navbar_Dark" href="' . BASE_URL . 'pages/use -->
             <li class="nav-item active"><a class="nav-link text-white" href="' . BASE_URL . 'pages/user/register.php">Register</a></li>
       
             <!-- Login button (when NOT logged in) -->
             <li class="nav-item active"><a class="nav-link text-white" href="' . BASE_URL . 'pages/user/login.php">Login</a></li>
+        </ul>
         ';}
         ?>
         </ul>

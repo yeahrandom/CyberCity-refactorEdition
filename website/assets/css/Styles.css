@@ -99,6 +99,22 @@ a {
     margin: 1%  ;
 }
 
+.subBoxWhite {
+    background: rgba(65,67,68,0.5);
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+
+    max-width: 100%;
+    width: 100%;
+
+    margin: 1%  ;
+}
+
 
 .title {
     margin-bottom: 2rem;

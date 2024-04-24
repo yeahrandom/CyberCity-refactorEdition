@@ -12,6 +12,7 @@ if (!authorisedAccess(false, true, true)) {
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/moduleList.css">
 
     <h1 >Challenge List</h1>
+    <a href="backupDieselGenerators.php">custom challenge webpage test</a>
 
     <?php
         // Get all Enabled Modules.
@@ -24,6 +25,11 @@ if (!authorisedAccess(false, true, true)) {
             $moduleQuery = $conn->query("SELECT Image from RegisteredModules WHERE ID = $moduleID");
             $moduleInformation = $moduleQuery->fetch();
             echo "<a href='challengeDisplay.php?moduleID=" . $moduleID . "'><div class='product_wrapper'>";
+
+
+
+
+
             
             // Check if the "Modules" have an image attachs to it.
             if ($moduleInformation['Image']) { 
