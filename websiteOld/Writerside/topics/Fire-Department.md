@@ -1,3 +1,0 @@
-# Fire Department
-
-Start typing here...

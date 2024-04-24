@@ -1,3 +1,0 @@
-# Google Keyword Search Guide
-
-Start typing here...
