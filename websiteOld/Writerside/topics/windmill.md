@@ -1,3 +1,0 @@
-# Windmill
-
-Start typing here...

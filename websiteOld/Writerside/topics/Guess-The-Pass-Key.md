@@ -1,3 +1,0 @@
-# Guess The Pass Key
-
-Start typing here...
