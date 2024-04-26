@@ -10,7 +10,7 @@
 
 
 <div class = "wideBox">
-    <div class ="subBoxWhite">
+
         <div class = "title" >
 
             <h1>Welcome to the Cyber City CTF Game</h1>
@@ -30,20 +30,9 @@
             }
             ?>
 
-
-
         </div>
-    </div>
+
 </div>
-
-
-
-
-
-
-
-
-
 
 
 <div class = "wideBox">
@@ -59,8 +48,8 @@
     <div class ="subBoxWhite">
         <div class = "title" >
 
-            <h1 style ="color: lightgreen">Master</h1>
-            <h2>The Art of mogging Kalden</h2>
+            <h1 style ="color: lightgreen">Thrive</h1>
+            <h2>Among us</h2>
 
         </div>
     </div>
@@ -68,20 +57,14 @@
     <div class ="subBoxWhite">
         <div class = "title" >
 
-            <h1 style ="color: yellow">Mog</h1>
-            <h2>Do what's never been done</h2>
+            <h1 style ="color: yellow">Connect</h1>
+            <h2>Literally.</h2>
 
         </div>
     </div>
 
 
 </div>
-
-
-
-
-
-
 
 
 <div class = "wideBox">

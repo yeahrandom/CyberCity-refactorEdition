@@ -6,12 +6,18 @@ if (!authorisedAccess(false, true, true)) {
 }
 
 ?>
-<div>
+<div class = 'wideBox'>
+         <div class = 'title'>
     <title>Cyber City - Challenges</title>
 
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/moduleList.css">
 
-    <h1 >Challenge List</h1>
+
+
+
+    <h1>Challenges</h1>
+
+
     <a href="backupDieselGenerators.php">custom challenge webpage test</a>
 
     <?php
@@ -31,7 +37,7 @@ if (!authorisedAccess(false, true, true)) {
 
 
             
-            // Check if the "Modules" have an image attachs to it.
+            // Check if the "Modules" have an image attached to it.
             if ($moduleInformation['Image']) { 
                 // Display Module Image.
                 echo "<div class='image'><img src='" . BASE_URL ."assets/img/challengeImages/" . $moduleInformation['Image'] . " ' width='100' height='100'></div>";
@@ -43,7 +49,9 @@ if (!authorisedAccess(false, true, true)) {
 
     <div class='name'><?=$challengeData['challengeTitle']?> </div>
     <div class='price'> Points: <?=$challengeData['PointsValue']?> </div>
+
+
     </div>
     <?php } ?>
-
+</div>
 <br>
