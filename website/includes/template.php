@@ -39,7 +39,7 @@
             ';
 
                 if ($_SESSION["access_level"] == $accessLevel) {
-                echo '
+                    echo '
                 <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -47,18 +47,19 @@
                         </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <h3 style="padding-left: 15px">Edit Users</h3>
-                        <a class="dropdown-item" href="' . BASE_URL .'pages/admin/userList.php">Enabled User List</a>
-                        <a class="dropdown-item" href="' . BASE_URL .'pages/admin/disabledUsers.php">Disabled User List</a>
+                        <a class="dropdown-item" href="' . BASE_URL . 'pages/admin/userList.php">Enabled User List</a>
+                        <a class="dropdown-item" href="' . BASE_URL . 'pages/admin/disabledUsers.php">Disabled User List</a>
                     <div class="dropdown-divider"></div>
-                         <a class="dropdown-item" href="' . BASE_URL .'pages/admin/moduleRegister.php">Add New Module & Challenge</a>
-                         <a class="dropdown-item" href="' . BASE_URL .'pages/admin/resetGame.php">Reset Game</a>
-                         <a class="dropdown-item" href="' . BASE_URL .'pages/admin/contactpage.php">View Contact requests</a>
-                         <a class="dropdown-item" href="' . BASE_URL .'pages/admin/readContactRequests.php">Read Contact Requests</a>
+                         <a class="dropdown-item" href="' . BASE_URL . 'pages/admin/moduleRegister.php">Add New Module & Challenge</a>
+                         <a class="dropdown-item" href="' . BASE_URL . 'pages/admin/resetGame.php">Reset Game</a>
+                         <a class="dropdown-item" href="' . BASE_URL . 'pages/admin/contactpage.php">View Contact requests</a>
+                         <a class="dropdown-item" href="' . BASE_URL . 'pages/admin/readContactRequests.php">Read Contact Requests</a>
                     </ul>
                 </li>
-        </ul>';
+        </ul>'; }
 
-        echo '
+
+        echo '</ul>
         <ul class="navbar-nav ms-auto"> <!--Right side of navbar-->
             <li class="nav-item active">
                 <a class="nav-link text-white" href="' . BASE_URL .'/assets/videos/video.mp4">Video</a></a>
@@ -76,7 +77,7 @@
                 <a class="nav-link" style = "color: indianred" href="' . BASE_URL .'/pages/user/logout.php">Logout</a></a>
             </li>
         </ul>
-        ';}
+        ';
         ?>
 
         <?php
