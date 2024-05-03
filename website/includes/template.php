@@ -62,9 +62,6 @@
         echo '</ul>
         <ul class="navbar-nav ms-auto"> <!--Right side of navbar-->
             <li class="nav-item active">
-                <a class="nav-link text-white" href="' . BASE_URL .'/assets/videos/video.mp4">Video</a></a>
-            </li>
-            <li class="nav-item active">
                 <a class="nav-link text-white" href="' . BASE_URL .'pages/contactUs/contact.php">Contact&nbsp;us</a>
             </li>
             <li class="nav-item active">
